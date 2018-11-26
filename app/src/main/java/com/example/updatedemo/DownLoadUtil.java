@@ -3,7 +3,10 @@ package com.example.updatedemo;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
+import android.os.Environment;
 import android.webkit.MimeTypeMap;
+
+import java.io.File;
 
 import static android.content.Context.DOWNLOAD_SERVICE;
 

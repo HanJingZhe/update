@@ -7,14 +7,18 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        //查看本地文件是否存在
+                        String absolutePath = Environment.getExternalStorageDirectory().getAbsolutePath()+"/Download/shopuU.apk";
+                        File file = new File(absolutePath);
+                        if(file.exists() && file.isFile()){//如果之前存在删除
+                            file.delete();
+                        }
                         if (Build.VERSION.SDK_INT >= 23) {//此处做动态权限申请
                             checkPermissionIsHave();//检查是否已经获取
                         } else {//低于23 不需要特殊处理
