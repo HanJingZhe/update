@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <!--内部的element可以是  files-path，cache-path，external-path，external-files-path，external-cache-path，
+    分别对应 Context.getFilesDir()，Context.getCacheDir()，Environment.getExternalStorageDirectory()，
+    Context.getExternalFilesDir()，Context.getExternalCacheDir()等几个方法
+    -->
+   <!-- Context.getFilesDir() 位于/data/data/安装目录
+    <files-path name="internalPath" path="file" />
+    &lt;!&ndash;Context.getCacheDir()&ndash;&gt;
+    <cache-path name="cachePath" path="file" />
+    &lt;!&ndash;Environment.getExternalStorageDirectory()&ndash;&gt;
+    <external-path name="externalPath" path="file" />
+    &lt;!&ndash;Context.getExternalFilesDir(null)&ndash;&gt;
+    <external-files-path name="externalFPath" path="file" />-->
+
+    <paths>
+        <external-path name="download" path="" />
+    </paths>
+</paths>
+
