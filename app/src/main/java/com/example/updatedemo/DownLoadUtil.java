@@ -46,7 +46,7 @@ public class DownLoadUtil {
         request.setDestinationInExternalPublicDir("/download", APK_NAME);
         // 将下载请求放入队列
         return downloadManager.enqueue(request);
-        
+
 
     }
 
