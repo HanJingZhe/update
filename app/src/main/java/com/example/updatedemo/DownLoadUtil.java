@@ -13,12 +13,6 @@ import static android.content.Context.DOWNLOAD_SERVICE;
  */
 public class DownLoadUtil {
 
-    private Context mContext;
-
-    public DownLoadUtil(Context context) {
-        mContext = context;
-    }
-
     /**
      * 下载APK
      * @param context

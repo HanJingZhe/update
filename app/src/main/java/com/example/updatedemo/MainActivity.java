@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private String APK_DESC = "更多更全";//应用描述
 
     //下载地址
-    private String DOWNLOAD_URL = "https://download.sj.qq.com/upload/connAssitantDownload/upload/MobileAssistant_1.apk";
+    private String DOWNLOAD_URL = "https://cdn.uduojin.com/download/ShopuU_sign.apk";
     private long downloadID;
 
 
@@ -90,11 +90,11 @@ public class MainActivity extends AppCompatActivity {
         //下载前注册广播
         setReceiver();
 
-        if(downloadID != 0){//如果之前此任务,先移除掉之前的
-            DownLoadUtil.clearCurrentTask(this,downloadID);
+        if (downloadID != 0) {//如果之前此任务,先移除掉之前的
+            DownLoadUtil.clearCurrentTask(this, downloadID);
         }
         //调取下载方法
-        downloadID = DownLoadUtil.downloadApk(this, DOWNLOAD_URL, APK_TITLE,APK_NAME, APK_DESC);
+        downloadID = DownLoadUtil.downloadApk(this, DOWNLOAD_URL, APK_TITLE, APK_NAME, APK_DESC);
     }
 
     /**

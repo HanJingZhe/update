@@ -1,18 +1,13 @@
 package com.example.updatedemo;
 
-import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.support.v4.content.FileProvider;
-import android.text.TextUtils;
-import android.webkit.MimeTypeMap;
-import android.widget.Toast;
 
 import java.io.File;
 
@@ -45,6 +40,7 @@ public class InstallReceiver extends BroadcastReceiver {
 
     /**
      * 安装apk
+     *
      * @param context
      * @param file
      */
@@ -64,7 +60,6 @@ public class InstallReceiver extends BroadcastReceiver {
             context.startActivity(intent);
         }
     }
-
 
 
 }
